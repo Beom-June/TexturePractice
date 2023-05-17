@@ -9,14 +9,15 @@ public class DrawLine : MonoBehaviour
     [SerializeField] Texture _brushTexure = null;
     [SerializeField] RenderTexture _renderTexture = null;
 
-    // 밑에 세개는 스티커 붙히기에 쓰기
-    [SerializeField] SkinnedMeshRenderer _renderSkinned = null;
-    [SerializeField] Mesh _mesh = null;
-    [SerializeField] MeshCollider _col = null;
+    //// 밑에 세개는 스티커 붙히기에 쓰기
+    //[SerializeField] SkinnedMeshRenderer _renderSkinned = null;
+    //[SerializeField] Mesh _mesh = null;
+    //[SerializeField] MeshCollider _col = null;
 
-    [SerializeField] private GameObject spriteTeeth; // 생성할 스프라이트 프리팹
+    //[SerializeField] private GameObject spriteTeeth; // 생성할 스프라이트 프리팹
 
     [SerializeField] float brushSize = 128.0f;
+    [SerializeField] private Material _drawMat = null;
 
 
 
@@ -26,15 +27,12 @@ public class DrawLine : MonoBehaviour
     {
         _renderTexture = new RenderTexture(512, 512, 32, RenderTextureFormat.ARGB32);
         _rawImg.texture = _renderTexture;
+        _drawMat.mainTexture = _renderTexture;
     }
-    private void Start()
-    {
-    }
+
     void Update()
     {
         Draw();
-
-
     }
     void Draw()
     {
@@ -93,14 +91,14 @@ public class DrawLine : MonoBehaviour
     }
 
     // 스티커 관련
-    public void ClickTeeth()
-    {
-        Debug.Log("fff");
-        Camera mainCamera = Camera.main; // 혹은 다른 방법으로 카메라를 가져옵니다.
+    //public void ClickTeeth()
+    //{
+    //    Debug.Log("fff");
+    //    Camera mainCamera = Camera.main; // 혹은 다른 방법으로 카메라를 가져옵니다.
 
-        Vector3 spawnPosition = mainCamera.transform.position + mainCamera.transform.forward; // 생성 위치 계산
-        Quaternion spawnRotation = mainCamera.transform.rotation; // 생성 회전값
+    //    Vector3 spawnPosition = mainCamera.transform.position + mainCamera.transform.forward; // 생성 위치 계산
+    //    Quaternion spawnRotation = mainCamera.transform.rotation; // 생성 회전값
 
-        Instantiate(spriteTeeth, spawnPosition, spawnRotation);
-    }
+    //    Instantiate(spriteTeeth, spawnPosition, spawnRotation);
+    //}
 }
