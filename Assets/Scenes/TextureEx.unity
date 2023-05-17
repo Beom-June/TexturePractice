@@ -1582,6 +1582,7 @@ MonoBehaviour:
   _renderTexture: {fileID: 8400000, guid: 506427bb414eb47b29fb0e88d4d83e79, type: 2}
   brushSize: 50
   _drawMat: {fileID: 2100000, guid: d7214cd5d9f7941b2b0f32af1fa2e6ae, type: 2}
+  _brushMat: {fileID: 2100000, guid: 73936418b8c73f84cbaae86c629d2e9a, type: 2}
 --- !u!1 &1036598048
 GameObject:
   m_ObjectHideFlags: 0

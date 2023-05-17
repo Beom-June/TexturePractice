@@ -18,6 +18,7 @@ public class DrawLine : MonoBehaviour
 
     [SerializeField] float brushSize = 128.0f;
     [SerializeField] private Material _drawMat = null;
+    [SerializeField] private Material _brushMat = null;
 
 
 
@@ -61,33 +62,31 @@ public class DrawLine : MonoBehaviour
     }
     public void MargentaColorChange()
     {
-        // 빨간색 브러시 생성
         Texture2D redBrushTexture = new Texture2D(1, 1);
         redBrushTexture.SetPixel(0, 0, Color.magenta);
         redBrushTexture.Apply();
-
         // _brushTexture에 redBrushTexture 할당
         _brushTexure = redBrushTexture;
+
+        //var brushTexture = _brushMat.mainTexture;
+        //_brushTexure = brushTexture;
+
     }
     public void BlueColorChange()
     {
-        // 빨간색 브러시 생성
-        Texture2D redBrushTexture = new Texture2D(1, 1);
-        redBrushTexture.SetPixel(0, 0, Color.blue);
-        redBrushTexture.Apply();
+        Texture2D blueBrushTexture = new Texture2D(1, 1);
+        blueBrushTexture.SetPixel(0, 0, Color.blue);
+        blueBrushTexture.Apply();
 
-        // _brushTexture에 redBrushTexture 할당
-        _brushTexure = redBrushTexture;
+        _brushTexure = blueBrushTexture;
     }
     public void GreenColorChange()
     {
-        // 빨간색 브러시 생성
-        Texture2D redBrushTexture = new Texture2D(1, 1);
-        redBrushTexture.SetPixel(0, 0, Color.green);
-        redBrushTexture.Apply();
+        Texture2D greenBrushTexture = new Texture2D(1, 1);
+        greenBrushTexture.SetPixel(0, 0, Color.green);
+        greenBrushTexture.Apply();
 
-        // _brushTexture에 redBrushTexture 할당
-        _brushTexure = redBrushTexture;
+        _brushTexure = greenBrushTexture;
     }
 
     // 스티커 관련
