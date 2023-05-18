@@ -21,7 +21,6 @@ public class DrawLine : MonoBehaviour
     [SerializeField] private Material _brushMat = null;
 
 
-
         private bool isDragging;
 
     private void Awake()
