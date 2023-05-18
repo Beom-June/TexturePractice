@@ -54,6 +54,8 @@ public class SaveRandomText : MonoBehaviour
         {
             int index = Random.Range(0, WORD_LIST.Length);
             randomWords[i] = WORD_LIST[index];
+            // 출력
+            Debug.Log(WORD_LIST[i]);
         }
         return randomWords;
     }
@@ -88,7 +90,7 @@ public class SaveRandomText : MonoBehaviour
         // string filePath = Path.Combine(Application.persistentDataPath, "SaveText");
         string folderPath = Path.Combine(Application.dataPath, "GameData", "SaveText");
         // string filePath = Path.Combine(folderPath, filePath);
-        Debug.Log("단어 출력 : " + string.Join(", ", WORD_LIST));
+        //Debug.Log("단어 출력 : " + string.Join(", ", WORD_LIST));
         Debug.Log("FilePath: " + folderPath);
     }
 }
